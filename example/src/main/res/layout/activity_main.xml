@@ -7,10 +7,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".example.ui.MainActivity">
+    tools:context=".example.ui.activities.MainActivity">
 
-    <TextView
+    <android.support.v4.view.ViewPager
+        android:id="@+id/photoPreviewPager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/preview_pager_height"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_below="@id/photoPreviewPager"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_arrow"
+        tools:ignore="ContentDescription" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/photoViewPager"
+        android:layout_width="@dimen/view_pager_size"
+        android:layout_height="@dimen/view_pager_size"
+        android:layout_centerInParent="true" />
+
 </RelativeLayout>
